@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name ="viewport" content = "initial-scale-1=1, width=device-width">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
+    <title>Peace</title>
+</head>
+<body>
+    <div class="container">
+            <h2>Find Your Peace</h2>
+            <div class="options" id="o1">Improve Your Sleep Quality</div>
+            <div class="options" id="o2">Reduce Your Stress </div>
+            <div class="options" id="o3">Improve Focus</div>
+            <div class="options" id="o4">Self-improvement</div>
+            <button class="options" id="mq" >Start Quiz</button>
+            <script>
+                document.getElementById('mq').addEventListener('click', function() {
+                    window.location.href = '/mq'; // Redirect to '/mq'
+                });
+            </script>
+    </div>
+</body>
+</html>

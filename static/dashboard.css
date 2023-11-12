@@ -1,0 +1,152 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.conatiner{
+    width: 100vw;
+    height: 100vh;
+    background-color: #D2E0FB;
+    position: relative;
+    overflow: hidden;
+}
+.stress{
+    width: 650px;
+    height: 200px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    
+    background: rgba(0, 0, 0,0.2);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+}
+.stress p{
+    font-size: 1.5rem;
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    position: relative;
+}
+.card{
+    width: 300px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,.2);
+    margin: 20px;
+    height: 500px;
+    color: #0E2954;
+}
+.card img{
+    width: 100%;
+    margin: auto;
+    height: 250px;
+}
+.card_content{
+    padding: 16px;
+}
+.card_content h3{
+    font-size: 28px;
+    margin-bottom: 8px;
+    font-weight:bold;
+    font-size: 2rem;
+}
+.card_content p{
+    color: #666;
+    font-size: 15px;
+    line-height: 1.3;
+    font-size: 1rem;
+}
+.btn{
+    position: absolute;
+    bottom: 10%;
+    padding: 8px;
+    border-radius: 10px;
+    width: 170px;
+    cursor: pointer;
+    font-size: 15px;
+}
+#btn1{
+    left: 6%;
+    width: 180px;
+}
+#btn2{
+    left: 32%;
+}
+#btn3{
+    left: 55%;
+}
+#btn4{
+    left: 80%;
+}
+header{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    backdrop-filter: blur(7px);
+    z-index: 99;
+    top:0;
+    left:0;
+    box-shadow: 0 0 10px #0000;
+    background-color: rgba(255, 255, 255, 0.04);
+}
+.logo{
+    border-radius: 85px;
+    width: 45%;
+    text-align: center;
+    border-color: black;
+}
+.logo h1{
+    color: rgba(223, 12, 206, 0.6);
+}
+.logo h1 span{
+    font-weight: bolder ;
+    color: #402188fe;
+}
+#chk1{
+    display: none;
+}
+img{
+    cursor: pointer;
+}
+header .logo{
+    flex: 1;
+    color: #000000d5;
+    margin-left: 50px;
+    /*text-transform: uppercase;*/
+}
+
+header ul{
+    flex: 2;
+    display: flex;
+    justify-content: space-evenly;
+}
+header ul li{
+    list-style: none;
+}
+header ul li a{
+    text-decoration: none;
+    color: rgb(149, 82, 178);
+    font-weight: 600px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+}
+header ul li a:hover{
+    border-bottom: 2px solid cadetblue;
+}
+header .menu{
+    font-size: 2.5rem;
+    display: none;
+}

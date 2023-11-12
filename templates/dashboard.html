@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+    <header>
+        <input type="checkbox" name="" id ="chk1">
+        <div class="logo"><h1><span>Peace</span></h1></div>
+            <ul>
+                <li><a href="#">Games</a></li>
+                <li><a href="#">Jokes</a></li>
+                <li><a href="#">Music</a></li>
+                <li><a href="#"><img src="{{ url_for('static', filename='/images/user-solid.svg') }}" alt="" height = "30"></a></li>
+                <li style="font-size: 30px;" >{{hi}}</li>
+                <li><a href="/logout"> <img src="{{ url_for('static', filename='/images/power-off-solid.svg') }}" alt="" height = "30"></a></li>
+            </ul>
+
+        <div class = "menu">
+            <label for="chk1"> <img src="{{ url_for('static', filename='/images/bars-solid.svg') }}" alt=""></label>
+        </div>
+    </header>
+    <div class="conatiner">
+        <div class="card-container">
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/Friends.jpg')}}" alt="">
+                <div class="card_content">
+                    <h3>Joke</h3>
+                    <p>Reading a joke can quickly lighten your mood, trigger the release of feel-good chemicals, and momentarily alleviate stress.</p>
+                    <button class="btn" id="btn1">Read Joke</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/games.jpg')}}" alt="">
+                <div class="card_content">
+                    <h3>Games</h3>
+                    <p>Playing games offers a therapeutic escape, engaging the mind and providing a enjoyable distraction, ultimately reducing stress by promoting relaxation and fun.</p>
+                    <button class="btn" id="btn2">Choose your Game</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/Music.jpg')}}" alt="">
+                <div class="card_content">
+                    <h3>Music</h3>
+                    <p>Listening to music has a calming effect on the nervous system, releasing stress by triggering the brain to produce feel-good chemicals and promoting a sense of relaxation.</p>
+                    <button class="btn" id="btn3">Music</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/breathing.jpg')}}" alt="">
+                <div class="card_content">
+                    <h3>Breathing</h3>
+                    <p>Practicing deep, mindful breathing triggers the body's relaxation response, reducing stress by calming the nervous system and promoting a sense of balance and well-being.</p>
+                    <button class="btn" id="btn4">Exercise</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

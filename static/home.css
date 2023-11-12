@@ -1,0 +1,77 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: url('images/home.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+.container h2{
+    color:white;
+    font-family: cursive;
+    font-size: 4rem;
+    position: absolute;
+    top: 234px;
+    left: 31%;
+    
+}
+.container p{
+    color:rgba(255, 255, 255,0.7);
+    font-family: cursive;
+    font-size: 2rem;
+    position: absolute;
+    top: 330px;
+    font-family: 'Times New Roman', Times, serif;
+    left:5%;
+}
+.options{
+    width: 250px;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 30%;
+    border: 2px solid white;
+    left: 50%;
+    padding-left: 30px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+#o1{
+    left: 5%;
+}
+#o2{
+    left: 30%;
+    width: 235px;
+    font-size: 1.3rem;
+}
+#o3{
+    left: 55%;
+    width: 220px;
+    font-size: 1.3rem;
+    padding-left: 45px;
+}
+#o4{
+    left: 80%;
+    width: 235px;
+    font-size: 1.3rem;
+    padding-left: 40px;
+}
+
+#mq{
+    bottom: 8%;
+    left: 40%;
+    padding: 8px;
+    background: transparent;
+}
+#mq:hover{
+    background: linear-gradient(to right, #001f3f, #3498db);
+}
