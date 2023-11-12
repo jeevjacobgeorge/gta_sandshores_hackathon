@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name ="viewport" content = "initial-scale-1=1, width=device-width">
+    <link rel="stylesheet" href="{{ url_for('static', filename='joke.css') }}">
+    <title>Feedback Form</title>
+</head>
+<body>
+    <body>
+        <div class="container">
+            <div class="joke">
+                <h1>How did you feel?</h1>
+                <form action="/quit_joke" method="post">
+                    <label for="good-feedback">
+                        <input type="radio" id="good-feedback" name="feedback" value="good">
+                        Good
+                    </label>
+            
+                    <label for="bad-feedback">
+                        <input type="radio" id="bad-feedback" name="feedback" value="bad">
+                        Bad
+                    </label>
+            
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>  
+    </body>
+    <h2>Feedback Form</h2>
+</body>
+</html>
+ 

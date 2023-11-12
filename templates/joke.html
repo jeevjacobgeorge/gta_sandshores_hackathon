@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name ="viewport" content = "initial-scale-1=1, width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joke</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='joke.css') }}">
 </head>
@@ -16,7 +16,17 @@
                 They're upto something</p>
             </p>
             <div class="btn" onclick="generateJoke()" id="generateJoke">Generate Joke</div>
-            <div class="btn" onclick="quit()" id="Quit">Quit</div>
+            <button class="btn" id="Quit" class="">Quit</button>
+        </div>
+        <div class="popup" id="popup" >
+            <h2>How do You feel now?</h2>
+            <form action="/quit_joke" method="post">
+                <input type="radio" name="feedback" id="" value="1" required>
+                Good
+                <input type="radio" name="feedback" id="f" value="0" required>
+                Bad
+                <button type="submit"  class="Submitbtn"><span>Submit</span></button>
+            </form>
         </div>
     </div>  
     <script>
@@ -30,10 +40,10 @@
             let randomVar = Math.floor(Math.random()* jokeList.length)
             document.querySelector(".jokeSpecify").innerHTML = jokeList[randomVar]
         }
-            function quit(){
-                window.location.href = '/quit';
-            }
-            
+        popup = document.getElementById('popup')
+        document.getElementById('Quit').addEventListener('click', () => {
+            popup.classList.add('open_popup')
+        })
     </script>
 </body>
 </html>

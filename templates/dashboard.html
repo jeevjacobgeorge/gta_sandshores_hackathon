@@ -9,7 +9,7 @@
 <body>
     <header>
         <input type="checkbox" name="" id ="chk1">
-        <div class="logo"><h1><span>Peace</span></h1></div>
+        <div class="logo"><h1><span>SerenitySphere</span></h1></div>
             <ul>
                 <li><a href="#">Games</a></li>
                 <li><a href="#">Jokes</a></li>
@@ -22,6 +22,7 @@
             <label for="chk1"> <img src="{{ url_for('static', filename='/images/bars-solid.svg') }}" alt=""></label>
         </div>
     </header>
+  
     <div class="conatiner">
         <div class="card-container">
             <div class="card">
@@ -56,6 +57,9 @@
                     <button class="btn" id="btn4">Exercise</button>
                 </div>
             </div>
+        <div id="customNotification" class="modal">
+            <p id="notificationMessage"></p>
+        </div>
         </div>
         <script>
             document.getElementById('btn1').addEventListener('click', function() {
@@ -71,6 +75,21 @@
                 window.location.href = '/be'; 
             });
         </script>
+        <script>
+            let msg = "Congrats your happy index is {{hi}}"; // Your message here
+            const customNotification = document.getElementById('customNotification');
+            const notificationMessage = document.getElementById('notificationMessage');
+    
+            notificationMessage.textContent = msg;
+            customNotification.style.display = 'block';
+    
+            // Close the custom notification after a few seconds (adjust the timeout as needed)
+            setTimeout(function() {
+                customNotification.style.display = 'none';
+            }, 4000); // Display for 4 seconds
+    
+    </script>
+    
     </div>
 </body>
 </html
