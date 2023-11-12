@@ -1,0 +1,70 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('images/home.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+
+.joke{
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid white;
+    width: 400px;
+    height: 400px;
+    padding: 35px;
+    padding-top: 40px;
+    color: white;
+    background-color: rgba(255,255,255,0.1);
+    font-weight: bold;
+}
+.joke h1{
+    margin-bottom: 25px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 2rem;
+}
+.joke p{
+    font-size: 1.2rem;
+}
+.btn{
+    border-radius: 10px;
+    background-color: transparent;
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    width: 150px;
+    padding: 10px;
+    padding-left: 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: white;
+    border: 2px solid white;
+    border-radius: 30px;
+}
+#generateJoke{
+    width: 180px;
+    left: 8%;
+    font-weight: bolder;
+    padding-left: 30px;
+}
+#Quit{
+    top: 80%;
+    left: 60%;
+    padding-left: 50px;
+    font-size: 1.4rem;
+}

@@ -6,7 +6,11 @@
 .conatiner{
     width: 100vw;
     height: 100vh;
-    background-color: #D2E0FB;
+    background: url('images/home.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     position: relative;
     overflow: hidden;
 }
@@ -37,7 +41,7 @@
 .card{
     width: 300px;
     background-color: #f0f0f0;
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden;
     box-shadow: 0px 2px 4px rgba(0,0,0,.2);
     margin: 20px;
@@ -76,15 +80,16 @@
 #btn1{
     left: 6%;
     width: 180px;
+    margin-left: 44px;
 }
 #btn2{
-    left: 32%;
+    left: 32.6%;
 }
 #btn3{
     left: 55%;
 }
 #btn4{
-    left: 80%;
+    left: 79%;
 }
 header{
     width: 100%;
@@ -142,6 +147,7 @@ header ul li a{
     padding: 10px 15px;
     font-weight: bolder;
     font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
 }
 header ul li a:hover{
     border-bottom: 2px solid cadetblue;
@@ -149,4 +155,9 @@ header ul li a:hover{
 header .menu{
     font-size: 2.5rem;
     display: none;
+}
+.hiandemoji {
+    border: 1px solid rgb(149, 82, 178); /* You can change the color by replacing #000 with your desired color code */
+    padding: 1px; /* Adjust padding as needed */
+    border-radius: 11px;
 }

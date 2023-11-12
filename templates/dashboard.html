@@ -14,8 +14,7 @@
                 <li><a href="#">Games</a></li>
                 <li><a href="#">Jokes</a></li>
                 <li><a href="#">Music</a></li>
-                <li><a href="#"><img src="{{ url_for('static', filename='/images/user-solid.svg') }}" alt="" height = "30"></a></li>
-                <li style="font-size: 30px;" >{{hi}}</li>
+                <li><div class="hiandemoji"><a href="#"><img src="{{ url_for('static', filename='/images/face.webp') }}" alt="" height = "30"></a><a style="font-size: 30px;" >{{hi}}</a></div></li>
                 <li><a href="/logout"> <img src="{{ url_for('static', filename='/images/power-off-solid.svg') }}" alt="" height = "30"></a></li>
             </ul>
 
@@ -58,7 +57,20 @@
                 </div>
             </div>
         </div>
-        
+        <script>
+            document.getElementById('btn1').addEventListener('click', function() {
+                window.location.href = '/joke'; 
+            });
+            document.getElementById('btn2').addEventListener('click', function() {
+                window.location.href = 'https://tictactoeegame.netlify.app/';
+            });
+            document.getElementById('btn3').addEventListener('click', function() {
+                window.location.href = 'https://lofifm.vercel.app/'; 
+            });
+            document.getElementById('btn4').addEventListener('click', function() {
+                window.location.href = '/be'; 
+            });
+        </script>
     </div>
 </body>
-</html>
+</html

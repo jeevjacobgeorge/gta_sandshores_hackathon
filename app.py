@@ -28,6 +28,36 @@ def submitmq():
     return render_template("dashboard.html",hi=idx)
 
 
+
+@app.route('/joke')
+def joke():
+    return render_template('joke.html')
+
+@app.route('/be')
+def be():
+    return render_template('be.html')
+
+@app.route('/quit')
+def quit_joke():
+    with open("data.json", "r") as f:
+        data = json.load(f)
+
+    act_idx = 0
+    review = request.form.get('feedback')
+    data["john4smith"]["total-freq"][act_idx] += 1
+    data["john4smith"]["success-freq"][act_idx] += review
+
+    effectiveness = data["john4smith"]["success-freq"][act_idx] / data["john4smith"]["total-freq"][act_idx]
+    today = str(date.today())
+    oldHappyIdx = data["john4smith"]["happyidx"][today]
+    inc = 0.2 if review else 0.1
+    data["john4smith"]["happyidx"][today] = min(oldHappyIdx * (1 + inc * effectiveness), 10)
+
+    with open("data.json", "w") as f:
+        json.dump(data, f, indent=4)
+
+    return render_template('dashboard.html', hi=data['john4smith']['happyidx'][today])
+
+
 if __name__ == "__main__":
     app.run(debug=True)
-

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name ="viewport" content = "initial-scale-1=1, width=device-width">
+    <title>Joke</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='joke.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="joke">
+            <h1> Joke Generator</h1>
+            <p class="jokeSpecify">
+                Why should you never trust the stairs?<br>
+                <br>
+                They're upto something</p>
+            </p>
+            <div class="btn" onclick="generateJoke()" id="generateJoke">Generate Joke</div>
+            <div class="btn" onclick="quit()" id="Quit">Quit</div>
+        </div>
+    </div>  
+    <script>
+        let jokeList = [
+            "What did the late tomato say to the early tomato?<br><br> I will ketch up",
+            "What do you call a nervous javelin thrower? <br><br> Shakespeare.",
+            "What's the best time to go to the dentist? <br><br>Tooth hurty.",
+            "What are the strongest days of the week?<br><br> Saturday and Sunday...the rest are weekdays."
+        ]
+        function generateJoke(){
+            let randomVar = Math.floor(Math.random()* jokeList.length)
+            document.querySelector(".jokeSpecify").innerHTML = jokeList[randomVar]
+        }
+            function quit(){
+                window.location.href = '/quit';
+            }
+            
+    </script>
+</body>
+</html>
