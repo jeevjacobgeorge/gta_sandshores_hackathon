@@ -22,7 +22,7 @@
             <label for="chk1"> <img src="{{ url_for('static', filename='/images/bars-solid.svg') }}" alt=""></label>
         </div>
     </header>
-  
+
     <div class="conatiner">
         <div class="card-container">
             <div class="card">
@@ -30,7 +30,7 @@
                 <div class="card_content">
                     <h3>Joke</h3>
                     <p>Reading a joke can quickly lighten your mood, trigger the release of feel-good chemicals, and momentarily alleviate stress.</p>
-                    <button class="btn" id="btn1">Read Joke</button>
+                    <button class="btn" id="btn1">Read Jokes</button>
                 </div>
             </div>
             <div class="card">
@@ -38,7 +38,7 @@
                 <div class="card_content">
                     <h3>Games</h3>
                     <p>Playing games offers a therapeutic escape, engaging the mind and providing a enjoyable distraction, ultimately reducing stress by promoting relaxation and fun.</p>
-                    <button class="btn" id="btn2">Choose your Game</button>
+                    <button class="btn" id="btn2">Play Games</button>
                 </div>
             </div>
             <div class="card">
@@ -46,7 +46,7 @@
                 <div class="card_content">
                     <h3>Music</h3>
                     <p>Listening to music has a calming effect on the nervous system, releasing stress by triggering the brain to produce feel-good chemicals and promoting a sense of relaxation.</p>
-                    <button class="btn" id="btn3">Music</button>
+                    <button class="btn" id="btn3">Play Music</button>
                 </div>
             </div>
             <div class="card">
@@ -63,33 +63,33 @@
         </div>
         <script>
             document.getElementById('btn1').addEventListener('click', function() {
-                window.location.href = '/joke'; 
+                window.location.href = '/joke';
             });
             document.getElementById('btn2').addEventListener('click', function() {
                 window.location.href = 'https://tictactoeegame.netlify.app/';
             });
             document.getElementById('btn3').addEventListener('click', function() {
-                window.location.href = 'https://lofifm.vercel.app/'; 
+                window.location.href = 'https://lofifm.vercel.app/';
             });
             document.getElementById('btn4').addEventListener('click', function() {
-                window.location.href = '/be'; 
+                window.location.href = '/be';
             });
         </script>
         <script>
             let msg = "Congrats your happy index is {{hi}}"; // Your message here
             const customNotification = document.getElementById('customNotification');
             const notificationMessage = document.getElementById('notificationMessage');
-    
+
             notificationMessage.textContent = msg;
             customNotification.style.display = 'block';
-    
+
             // Close the custom notification after a few seconds (adjust the timeout as needed)
             setTimeout(function() {
                 customNotification.style.display = 'none';
             }, 4000); // Display for 4 seconds
-    
+
     </script>
-    
+
     </div>
 </body>
 </html

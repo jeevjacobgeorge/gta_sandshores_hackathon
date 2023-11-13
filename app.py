@@ -15,17 +15,18 @@ def mq():
 
 @app.route('/submitmq',methods = ['GET','POST'])
 def submitmq():
-    with open("data.json", "r") as f:
+    with open("gta_sandshores_hackathon/data.json", "r") as f:
         data = json.load(f)
-        
+
     quiz_res = data['john4smith']['answers']
 
     idx = float(reduce(lambda acc, val: acc + 5 - val, quiz_res, 0) / 2.5)
     round(idx, 2)
     data["john4smith"]["happyidx"][str(date.today())] = idx
 
-    with open("data.json", "w") as f:
+    with open("gta_sandshores_hackathon/data.json", "w") as f:
         json.dump(data, f, indent=4)
+
     return render_template("dashboard.html",hi=idx)
 
 
@@ -40,7 +41,7 @@ def be():
 
 @app.route('/quit_joke',methods = ['GET','POST'])
 def quit_joke():
-    with open("data.json", "r") as f:
+    with open("gta_sandshores_hackathon/data.json", "r") as f:
         data = json.load(f)
 
     act_idx = 0
@@ -54,13 +55,10 @@ def quit_joke():
     inc = 0.2 if review else 0.1
     data["john4smith"]["happyidx"][today] = min(round(oldHappyIdx * (1 + inc * effectiveness), 2), 10)
 
-    with open("data.json", "w") as f:
+    with open("gta_sandshores_hackathon/data.json", "w") as f:
         json.dump(data, f, indent=4)
 
     return render_template('dashboard.html', hi=data['john4smith']['happyidx'][today])
-
-
-
 
 if __name__ == "__main__":
     app.run(debug=True)
