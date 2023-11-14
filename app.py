@@ -26,7 +26,9 @@ def submitmq(idx):
 
     return render_template("dashboard.html",hi=idx)
 
-
+@app.route('/game')
+def game():
+    return render_template("flappy_bird.html")
 
 @app.route('/joke')
 def joke():
@@ -36,6 +38,9 @@ def joke():
 def be():
     return render_template('be.html')
 
+@app.route('/music')
+def music():
+    return render_template("music.html")
 @app.route('/quit_joke',methods = ['GET','POST'])
 def quit_joke():
     with open("gta_sandshores_hackathon/data.json", "r") as f:
@@ -70,7 +75,7 @@ def quit_be():
     effectiveness = data["john4smith"]["success-freq"][act_idx] / data["john4smith"]["total-freq"][act_idx]
     today = str(date.today())
     oldHappyIdx = data["john4smith"]["happyidx"][today]
-    inc = 0.2 if review else 0.1
+    inc = 0.15 if review else 0.05
     data["john4smith"]["happyidx"][today] = min(round(oldHappyIdx * (1 + inc * effectiveness), 2), 10)
 
     with open("gta_sandshores_hackathon/data.json", "w") as f:
