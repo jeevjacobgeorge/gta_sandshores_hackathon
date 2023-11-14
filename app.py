@@ -13,18 +13,15 @@ def index():
 def mq():
     return render_template('mq.html')
 
-@app.route('/submitmq',methods = ['GET','POST'])
-def submitmq():
+@app.route('/submitmq/<float:idx>',methods = ['GET','POST'])
+def submitmq(idx):
     with open("gta_sandshores_hackathon/data.json", "r") as f:
-        data = json.load(f)
+            data = json.load(f)
 
     quiz_res = data['john4smith']['answers']
-
-    idx = float(reduce(lambda acc, val: acc + 5 - val, quiz_res, 0) / 2.5)
-    round(idx, 2)
     data["john4smith"]["happyidx"][str(date.today())] = idx
 
-    with open("gta_sandshores_hackathon/data.json", "w") as f:
+    with open("data.json", "w") as f:
         json.dump(data, f, indent=4)
 
     return render_template("dashboard.html",hi=idx)
@@ -46,6 +43,27 @@ def quit_joke():
 
     act_idx = 0
     review = int(request.form.get("feedback"))
+    data["john4smith"]["total-freq"][act_idx] += 1
+    data["john4smith"]["success-freq"][act_idx] += review
+
+    effectiveness = data["john4smith"]["success-freq"][act_idx] / data["john4smith"]["total-freq"][act_idx]
+    today = str(date.today())
+    oldHappyIdx = data["john4smith"]["happyidx"][today]
+    inc = 0.2 if review else 0.1
+    data["john4smith"]["happyidx"][today] = min(round(oldHappyIdx * (1 + inc * effectiveness), 2), 10)
+
+    with open("gta_sandshores_hackathon/data.json", "w") as f:
+        json.dump(data, f, indent=4)
+
+    return render_template('dashboard.html', hi=data['john4smith']['happyidx'][today])
+
+@app.route('/quit_be',methods = ['GET','POST'])
+def quit_be():
+    with open("gta_sandshores_hackathon/data.json", "r") as f:
+        data = json.load(f)
+
+    act_idx = 1
+    review = 1
     data["john4smith"]["total-freq"][act_idx] += 1
     data["john4smith"]["success-freq"][act_idx] += review
 

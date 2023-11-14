@@ -11,43 +11,27 @@
     <h1>Mood Quiz</h1>
     <form id="quiz-form" action="/submitmq" method="get">
       <div class="question" id="question1">
-        <p>How do you cope with stress?</p>
-        <button class="option" onclick="showQuestion(2, 1, 1)">Seek support from friends</button>
-        <button class="option" onclick="showQuestion(2, 1, 2)">Practice relaxation techniques</button>
-        <button class="option" onclick="showQuestion(2, 1, 3)">Engage in physical exercise</button>
-        <button class="option" onclick="showQuestion(2, 1, 4)">Find it challenging </button>
+        <p>How well do you cope with stress?</p>
+        <button class="option" onclick="showQuestion(2, 1, 4)">Good</button>
+        <button class="option" onclick="showQuestion(2, 1, 3)">Moderate</button>
+        <button class="option" onclick="showQuestion(2, 1, 2)">Bad</button>
+        <button class="option" onclick="showQuestion(2, 1, 1)">Severe</button>
       </div>
 
       <div class="question" id="question2" style="display: none;">
         <p>How well do you sleep?</p>
-        <button class="option" onclick="showQuestion(3, 2, 1)">Good</button>
-        <button class="option" onclick="showQuestion(3, 2, 2)">Occasional sleep disturbances</button>
-        <button class="option" onclick="showQuestion(3, 2, 3)">Frequent sleep problems</button>
-        <button class="option" onclick="showQuestion(3, 2, 4)">Experience chronic insomnia</button>
+        <button class="option" onclick="showQuestion(3, 2, 4)">Good</button>
+        <button class="option" onclick="showQuestion(3, 2, 3)">Moderate</button>
+        <button class="option" onclick="showQuestion(3, 2, 2)">Bad</button>
+        <button class="option" onclick="showQuestion(3, 2, 1)">Severe</button>
       </div>
 
       <div class="question" id="question3" style="display: none;">
-        <p>How do you feel about your daily activities?</p>
-        <button class="option" onclick="showQuestion(4, 3, 1)">Find enjoyment</button>
-        <button class="option" onclick="showQuestion(4, 3, 2)">Mixed feelings</button>
-        <button class="option" onclick="showQuestion(4, 3, 3)">Unmotivated</button>
-        <button class="option" onclick="showQuestion(4, 3, 4)">Pervasive lack of interest</button>
-      </div>
-
-      <div class="question" id="question4" style="display: none;">
-        <p>How do you handle life changes or challenges?</p>
-        <button class="option" onclick="showQuestion(5, 4, 1)">Love challenges</button>
-        <button class="option" onclick="showQuestion(5, 4, 2)">Find some changes stressful</button>
-        <button class="option" onclick="showQuestion(5, 4, 3)">Find it overwhelming</button>
-        <button class="option" onclick="showQuestion(5, 4, 4)">Feel paralyzed</button>
-      </div>
-
-      <div class="question" id="question5" style="display: none;">
-        <p>How do you perceive your relationships with others?</p>
-        <button class="option" onclick="showlast()">Feel supported </button>
-        <button class="option" onclick="showlast()">Feel stressful</button>
-        <button class="option" onclick="showlast()">Feel lonely</button>
-        <button class="option" onclick="showlast()">Feel isolated</button>
+        <p>How well do you perceive your relationships?</p>
+        <button class="option" onclick="showlast(4)">Good</button>
+        <button class="option" onclick="showlast(3)">Moderate</button>
+        <button class="option" onclick="showlast(2)">Bad</button>
+        <button class="option" onclick="showlast(1)">Severe</button>
       </div>
       <button type="submit" id="submit-button" style="display: none;">Submit</button>
     </form>

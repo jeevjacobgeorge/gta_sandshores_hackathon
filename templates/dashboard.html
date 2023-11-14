@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#402188fe"> <!-- Set your desired theme color -->
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}"> <!-- Replace 'favicon.png' with your actual favicon -->
     <title>DashBoard</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
 </head>
 <body>
     <header>
         <input type="checkbox" name="" id ="chk1">
-        <div class="logo"><h1><span>SerenitySphere</span></h1></div>
+               <div class="logo">
+            <img src="{{url_for('static', filename = '/images/yin_yang.svg')}}" height="50">
+            <h1><span>SerenitySphere</span></h1>
+        </div>
             <ul>
                 <li><a href="#">Games</a></li>
                 <li><a href="#">Jokes</a></li>
@@ -34,6 +39,14 @@
                 </div>
             </div>
             <div class="card">
+                <img src="{{ url_for('static', filename='images/breathing.jpg')}}" alt="">
+                <div class="card_content">
+                    <h3>Breathing</h3>
+                    <p>Practicing deep, mindful breathing triggers the body's relaxation response, reducing stress.</p>
+                    <button class="btn" id="btn4">Exercise</button>
+                </div>
+            </div>
+            <div class="card">
                 <img src="{{ url_for('static', filename='images/games.jpg')}}" alt="">
                 <div class="card_content">
                     <h3>Games</h3>
@@ -47,14 +60,6 @@
                     <h3>Music</h3>
                     <p>Listening to music has a calming effect on the nervous system.</p>
                     <button class="btn" id="btn3">Play Music</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="{{ url_for('static', filename='images/breathing.jpg')}}" alt="">
-                <div class="card_content">
-                    <h3>Breathing</h3>
-                    <p>Practicing deep, mindful breathing triggers the body's relaxation response, reducing stress.</p>
-                    <button class="btn" id="btn4">Exercise</button>
                 </div>
             </div>
         <div id="customNotification" class="modal">
@@ -76,7 +81,7 @@
             });
         </script>
         <script>
-            let msg = "Congrats your happy index is {{hi}}"; // Your message here
+            let msg = "Congrats your happy index is now {{hi}}"; // Your message here
             const customNotification = document.getElementById('customNotification');
             const notificationMessage = document.getElementById('notificationMessage');
 
@@ -85,8 +90,14 @@
 
             // Close the custom notification after a few seconds (adjust the timeout as needed)
             setTimeout(function() {
+                let msg = "Complete activities to increase Happiness index"
+                notificationMessage.textContent = msg;
+                customNotification.style.display = 'block';
+            }, 3000); //
+            setTimeout(function() {
                 customNotification.style.display = 'none';
-            }, 4000); // Display for 4 seconds
+            }, 5500);
+
 
     </script>
 

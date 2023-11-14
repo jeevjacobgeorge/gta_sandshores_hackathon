@@ -7,7 +7,7 @@
 .container {
     width: 100vw;
     min-height: 100vh;
-    background: url('images/home.jpg');
+    background-image: url('images/home.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -44,10 +44,10 @@
 
 .card {
     width: 270px;
-    background-color: #f0f0f0;
+    background-color: #fff;;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px;
     height: 500px;
     color: #0E2954;
@@ -70,6 +70,7 @@
     margin-bottom: 8px;
     font-weight: bold;
     font-size: 2rem;
+    color: #402188fe;
 }
 
 .card_content p {
@@ -87,6 +88,8 @@
     width: 80%; /* Make the button width 100% to fill the card width */
     cursor: pointer;
     font-size: 15px;
+    background-color: #402188fe; /* Adjust the background color */
+    color: #fff; /* Adjust the text color */
 }
 
 #btn1,
@@ -111,15 +114,15 @@
 }
 
 #btn2 {
-    left: calc(25% - 1px);
+    left: calc(2% + 5px);
 }
 
 #btn3 {
-    left: calc(50% - 20px);
+    left: calc(2% + 5px);
 }
 
 #btn4 {
-    left: calc(75% - 30px);
+    left: calc(2% + 5px);
 }
 
 
@@ -134,14 +137,19 @@ header {
     z-index: 99;
     top: 0;
     left: 0;
-    box-shadow: 0 0 10px #0000;
-    background-color: rgba(255, 255, 255, 0.04);
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust the background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .logo{
     border-radius: 85px;
     width: 45%;
     text-align: center;
     border-color: black;
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    margin-right: 10px; /* Adjust the margin as needed */
 }
 .logo h1{
     color: rgba(223, 12, 206, 0.6);
@@ -149,6 +157,12 @@ header {
 .logo h1 span{
     font-weight: bolder ;
     color: #402188fe;
+}
+
+header .logo h1 {
+    color: #402188fe;
+    margin: 0;
+    font-size: 1.5rem; /* Adjust the font size */
 }
 #chk1{
     display: none;
@@ -173,7 +187,7 @@ header ul li{
 }
 header ul li a{
     text-decoration: none;
-    color: rgb(149, 82, 178);
+    color: #402188fe;
     font-weight: 600px;
     text-transform: uppercase;
     padding: 10px 15px;
@@ -196,11 +210,14 @@ header .menu{
 .modal {
     display: none;
     position: fixed;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
+    background-color: #402188fe; /* Adjust the background color */
+    color: #fff; /* Adjust the text color */
+    text-align: center;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 20px;
+
 }
